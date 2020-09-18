@@ -1,6 +1,10 @@
 #include<stdio.h>
+#include<iostream>
 #include <gl/glut.h>
+
 #define KEY_ESC 27 /* GLUT doesn't supply this */
+
+using namespace std;
 
 int fullscreen = 0;
 int mouseDown = 0;
@@ -138,18 +142,16 @@ void idle(void)
 
 void mySpecialFunction(int key, int x, int y)
 {
-    //if (key == GLUT_KEY_F1)
-    //{
-        printf("U -----------> rotate clockwise\n");
-        printf("Y -----------> rotate counter clockwise\n");
-        printf("W or w ------> Up\n");
-        printf("S or s -----> Down\n");
-        printf("D or d ------> Right\n");
-        printf("A or a ------> Left\n");
-        printf("Z or z ------> Shrink\n");
-        printf("X or x ------> Grow\n");
-        printf("Escape Key ---> exit the program\n\n");
-    //}
+  	cout << "U -----------> rotate clockwise\n";
+	cout << "W or w ------> Up\n";
+	cout << "S or s -----> Down\n";
+	cout << "D or d ------> Right\n";
+	cout << "A or a ------> Left\n";
+	cout << "Z or z ------> Shrink\n";
+	cout << "X or x ------> Grow\n";
+	cout << "Z or z ------> Shrink\n";
+	cout << "Escape Key ---> exit the program\n\n";
+	
 }
 
 void keyboard(unsigned char key, int x, int y)
@@ -266,7 +268,7 @@ int main(int argc, char *argv[])
 
 	glutInitDisplayMode(GLUT_RGB | GLUT_DOUBLE);
 
-	glutCreateWindow("13 - Solid Shapes");
+	glutCreateWindow("GLUT 3D -> Camera / 3D Transformation ");
 
 	glutDisplayFunc(display);
 	glutKeyboardFunc(keyboard);
